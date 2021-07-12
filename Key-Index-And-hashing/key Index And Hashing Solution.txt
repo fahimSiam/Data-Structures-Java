@@ -1,0 +1,232 @@
+//**************TASK 1*****************
+
+//$$$$$Key Index Class$$$$$
+
+
+
+public class KeyIndex{
+    public int [] k;
+    //public int n=0;
+    int min;
+
+    public KeyIndex(int[] a){
+        //len=a.length;
+        int max=a[0];
+        min=a[0];
+        for(int i=0;i<a.length;i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+            if(a[i]<min){
+                min=a[i];
+            }
+        }
+
+        //fixing minus int
+        if(min<0){     
+            min=min*(-1);
+        }
+            max=max+min;
+            k=new int[max+1];
+            for(int n=0;n<a.length;n++){
+                a[n]=a[n]+min;
+            }
+        
+
+        //making the array
+        for(int n=0;n<a.length;n++){
+            int q=a[n];
+            k[q]=k[q]+1;
+    }
+
+    
+}
+
+
+public boolean search(int val){
+    val=val+min;
+    if(val<0 || val>k.length){
+        return false;
+    }
+    if(k[val]>0) return true;
+    else{ 
+        return false;
+    }
+}
+
+
+public int[] sort(){
+    //determining the size of the new array using keyIndex array
+    int len=0;
+    for(int z=0; z<k.length; z++){
+        if(k[z]>0){
+            len=len+k[z];
+        }
+    }
+    int [] b = new int[len];
+    int n=0;
+    for(int j=0;j<len;){
+        if(k[n]>0){
+            while(k[n]>0){
+                b[j]=n-min;
+                k[n]=k[n]-1;
+                j++;
+            }
+            n++;
+        }
+        else{
+            n++;
+        }
+    }
+    return b;
+} 
+
+
+public void printArray(int[] b){
+        for(int j=0; j<b.length;j++){
+            System.out.print(b[j]+" ");
+        }
+        System.out.println();
+     }
+
+    
+}
+
+
+
+
+
+
+//$$$$$KeyIndex Tester class$$$$$
+
+
+
+
+public class Tester {
+    public static void main(String[] args){
+       int[] a = {5, 12, 6, 6, 5,-11, 10, 12, 1};
+        KeyIndex num = new KeyIndex(a);
+      // num.printArray();  
+       int val=12; 
+       System.out.println("Result of searchig for "+val+" : "+num.search(val));
+       int[] b=num.sort();
+       num.printArray(b);
+    }
+}
+
+
+
+
+
+//************TASK 2***************
+//LINEAR PROBBING
+
+
+
+//HASHING CLASS
+
+package hashing;
+
+public class hashing{
+    String hash[] =new String[9];//hash table array
+    public hashing(){
+        //String [] s = new String[9];
+        }
+
+
+//$$$$$ HASHING TABLE CREATION $$$$$$
+
+
+ public void hashTable(String [] k){
+        //split the string
+        for(int i=0; i<k.length; i++){
+            char[] s= k[i].toCharArray();
+            int value=hashCalc(s);
+            if(hash[value]==null){
+                hash[value]=k[i];
+            }
+            else{
+                probing(k[i],value);
+
+            }
+
+        }
+        printHashArray();
+    }
+
+ 
+
+//$$$$$ PROBBING $$$$$$
+
+
+public void  probing(String s, int value) {
+        if(value>8){
+            value=0;
+        }
+        while(hash[value]!=null){
+            if(value==8){
+                value=0;
+            }
+            else{
+            value++;
+            }
+        }
+        hash[value]=s;
+    }
+
+
+
+//$$$$$HASH VALUE CALCULATION$$$$
+
+
+
+    public int hashCalc(char []s){
+        int sum=0;
+        int cons=0;
+        for(int d=0; d<s.length;d++){
+            if(s[d]=='0' || s[d]=='1' || s[d]=='2' || s[d]=='3' || s[d]=='4' || s[d]=='5' || s[d]=='6' || s[d]=='7' || s[d]=='8' || s[d]=='9'){
+                int a=Character.getNumericValue(s[d]);  
+                sum=sum+a;
+            }
+            else if(s[d]!='A' && s[d]!='E' && s[d]!='I' && s[d]!='O' && s[d]!='U'){
+                cons++;
+            }
+        }
+        sum=sum+(cons*24);
+        sum=sum%9;
+        return sum;
+    }
+
+
+
+
+//$$$$$ HASHING ARRAY PRINT $$$$$$
+
+
+    public void printHashArray() {
+        for(int x=0; x<hash.length; x++){
+            System.out.println(hash[x]+ " is at index "+ x);
+        }
+    }
+
+}
+
+
+
+//********TESTER CLASS FOR TASK 2(HASHING)***************
+
+
+package hashing;
+
+public class Tester {
+    public static void main(String[] args){
+       String[] k = {"ST1E89B8A32", "AB2", "AB2"};
+        hashing num = new hashing();
+       num.hashTable(k);
+    //  char[] s = {'S','T','1','E','8','9','B','8','A','3','2'};
+    // System.out.println(num.hashCalc(s));
+    }
+}
+
+
+
