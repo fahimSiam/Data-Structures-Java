@@ -1,0 +1,51 @@
+1. Music Chair:
+                Suppose you have been hired to develop a musical chair game. In this game there will be 7 
+                participants and all of them will be moving clockwise around a set of 7 chairs organizedin 
+                a circular manner while a music will be played in the background. You will control the
+                music using random numbers between 0-3.If the generated random number is 1, you will
+                stop the music and if the number of participants who are still in the game is n, the
+                participant at position (n/2) will be eliminated. Each time a participant is eliminated, a
+                chair will be removed and you have to print the player names who are still in the game.
+                The game will end when there will be only one participant left. At the end of the game,
+                display the name of the winner.
+2.      Write a method that takes as input a singly linked list and prints the first duplicate
+        number.
+        public void printDuplicate(Node head){
+        //to do
+        }
+        OR
+        def printDuplicate (head):
+        pass
+        Sample Input Sample Output
+        5 → 4 → 15 →2 → 3 → 4 4
+        6 → 6 → 10 →10 → 1 →1 → 10 → 6 6
+5.      Complete the method below that takes the reference of a non-dummy headed singly
+        linear linked list and removes all the nodes containing multiples of 5 from the list.
+        remove_multiple_of_five(head)
+        Sample Input Sample Output
+        5 → 6 → 35 → 10 → 12 → 90 6 →12
+        11 → 21 → 3 → 43 → 51 11 → 21 → 3 → 43 → 51
+        10 → 20 → 30 → 40 → 50 null
+6.    You are given two dummy-headed singly linked lists, write a method to sum the
+      integers represented in two different lists. The input lists will have single digits in each
+      node. The digits in each node concat to form an integer.
+      Sample Input Sample Output
+      List 1 : x → 4 → 5 → 3
+      List 2 : x → 9 → 5 → 2
+      x → 1 → 4 → 0 → 5
+      Explanation: List 1 represents the integer 453. List 2 represents the integer 952.
+      453+952=1405. Hence, List 3 contains 1 → 4 → 0 → 5.7. Given a non-dummy headed circular list, write down a method for inserting an element
+      into the list.
+8.     Write down the insertBefore method which inserts a new element in the list before the
+        node containing the given element.The method takes as parameters a dummy headed
+        doubly linked circular list, the element existing in the list and new element to be added.
+        public void insertBefore (Node head, Object elem, Object
+        newElement){
+        //to do
+        }
+        OR
+        def insertBefore (head, elem, newElement):
+        pass
+        insertBefore (head, 3, 50)
+        Sample Input Sample Output
+        ↻ x ⇄1 ⇄ 2 ⇄ 3 ⇄ 4 ↺ ↻ x ⇄1 ⇄ 2 ⇄ 50 ⇄ 3 ⇄ 4 
