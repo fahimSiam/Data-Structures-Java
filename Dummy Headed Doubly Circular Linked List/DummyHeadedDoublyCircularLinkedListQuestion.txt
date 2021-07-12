@@ -1,0 +1,37 @@
+Task 1:
+        i) Create a Node class which will hold three fields i.e an integer element and a
+        reference to the next Node along with a reference to the previous Node.
+        ii) Create a Dummy Headed Doubly Circular Linked list Abstract Data Type
+        (ADT)named DoublyList.The elements in the list are Nodes consisting of an integer
+        type key (all keys are unique) and a reference to the next node and a reference to the
+        previous Node.
+        [You are not allowed to use any class variable other than head.]
+Task 2: (Basic operations) (20 marks)
+        1. Constructors: (3)a. DoublyList (int [] a) or def __intit__(self,a)
+        Pre-condition: Array cannot be empty.
+        Post-condition:This is the default constructor of MyList class. This
+        constructor creates a Dummy Headed Doubly Circular Linked list list
+        from an array.
+2. void showList ( ) or def showList(self) (1)
+        Precondition: None.
+        Postcondition: Outputs the keys of the elements of the order list. If the list is
+        empty, outputs “Empty list”.
+3. void insert (Node newElement, ) or def insert(self, newElement) (4)
+        Pre-condition: None.
+        Post-condition: This method inserts newElement at the tail of the list. If an
+        element with the same key as newElement already exists in the list, then it
+        concludes the key already exists and does not insert the key.
+4. void insert (int newElement, int index) or def insert(self, newElement, index) (4)
+        Pre-condition: The list is not empty.
+        Post-condition: This method inserts newElement at the given index of the list. If
+        an element with the same key as newElement value already exists in the list,
+        then it concludes the key already exists and does not insert the key. [You must
+        also check the validity of the index].
+5. void remove (int index) or def insert(self, index) (4)
+        Pre-condition: The list is not empty.
+        Post-condition: This method removes the Node at the given index of the list.[You
+        must also check the validity of the index].
+6. int removeKey(int deleteKey) or def remove(self, deletekey) (4)
+        Pre-condition: List is not empty.
+        Post-condition: Removes the element from a list that contains the deleteKey and
+        returns the deleted key value
