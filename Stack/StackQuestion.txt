@@ -1,0 +1,5 @@
+PARENTHESIS CHECKING WITH STACK
+Task 1
+Solve the above problem using an array based stack.
+Task 2
+Solve the above problem using a linked list based stack.
