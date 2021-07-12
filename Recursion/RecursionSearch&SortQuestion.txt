@@ -4,5 +4,6 @@ Searching and Sorting with recursion
 3. Sort a singly linked sequential list using bubble sort algorithm.
 4. Sort a singly linked sequential list using selection sort algorithm.
 5. Sort a DOUBLY linked sequential list using insertion sort algorithm.
-6. Implement binary search algorithm RECURSIVELY.7. Implement a recursive algorithm to find the n-th Fibonacci number using
-   memoization
+6. Implement binary search algorithm RECURSIVELY.
+7. Implement a recursive algorithm to find the n-th Fibonacci number using
+   memoization.
