@@ -1,4 +1,4 @@
-Searching and Sorting with recursion
+Searching and Sorting with recursion and without both in search&sort
 1. Sort an array RECURSIVELY using selection sort algorithm.
 2. Sort an array RECURSIVELY using insertion sort algorithm.
 3. Sort a singly linked sequential list using bubble sort algorithm.
