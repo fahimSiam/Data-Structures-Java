@@ -1,4 +1,4 @@
-Searching and Sorting Lab
+Searching and Sorting with recursion
 1. Sort an array RECURSIVELY using selection sort algorithm.
 2. Sort an array RECURSIVELY using insertion sort algorithm.
 3. Sort a singly linked sequential list using bubble sort algorithm.
