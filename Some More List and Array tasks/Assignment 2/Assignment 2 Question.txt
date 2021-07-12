@@ -1,0 +1,96 @@
+1. 
+    Given base and n that are both 1 or more, compute recursively (no loops) the value of base 
+    to the n power, so powerN(3, 2) is 9 (3 squared).
+    powerN(3, 1) → 3
+    powerN(3, 2) → 9
+    powerN(3, 3) → 27
+    
+2. [Medium] [7 Marks]
+    Suppose, you have been given a non-negative integer which is the height of a ‘house of 
+    cards’. To build such a house you at-least require 8 cards. To increase the level (or height) 
+    of that house, you would require four sides and a base for each level. Therefore, for the top 
+    level, you would require 8 cards and for each of the rest of the levels below you would 
+    require 5 extra cards. If you were asked to build level one only, you would require just 8
+    cards. Of course, the input can be zero; in that case, you do not build a house at all. 
+    Complete the recursive method below to calculate the number of cards required to build 
+    a ‘house of cards’ of specific height given by the parameter
+    public int hocBuilder (int height){
+    // TO DO
+    }
+
+5. [Hard] [ 
+        a. Print the following pattern for the given input (you must use recursion):
+        Sample Input: 5
+        Sample Output:
+        1
+        1 2
+        1 2 3
+        1 2 3 4
+        1 2 3 4 5
+        b. Print the following pattern for the given input (you must use recursion):
+        Sample Input: 5
+        Sample Output:
+                1
+              1 2
+            1 2 3
+          1 2 3 4
+        1 2 3 4 5
+6. [Very Hard] 
+        Suppose, you are working in a company ‘X’ where your job is to calculate the profit based 
+        on their investment. 
+        If the company invests 100,000 USD or less, their profit will be based on 75,000 USD as 
+        first 25,000 USD goes to set up the business in the first place. For the first 100,000 USD, 
+        the profit margin is low: 4.5%. Therefore, for every 100 dollar they spend, they get a profit 
+        of 4.5 dollar.
+        For an investment greater than 100,000 USD, for the first 100,000 USD (actually on 75,000 
+        USD as 25,000 is the setup cost), the profit margin is 4.5% where for the rest, it goes up to 
+        8%. For example, if they invest 250,000 USD, they will get an 8% profit for the 150,000 
+        USD. In addition, from the rest 100,000 USD, 25,000 is the setup cost and there will be a 
+        4.5% profit on the rest 75,000. Investment will always be greater or equal to 25,000 and 
+        multiple of 100.
+        Complete the RECURSIVE methods below that take an array of integers (investments) 
+        and an iterator (always sets to ZERO(‘0’) when the method is initially called) and prints 
+        the profit for the corresponding investment. You must avoid loop and multiplication (‘*’) 
+        operator. 
+        Output:
+                1. Investment: 25000; Profit: 0.0
+                2. Investment: 100000; Profit: 3375.0
+                3. Investment: 250000; Profit: 15375.0
+                4. Investment: 350000; Profit: 23375.0
+                
+7.      Suppose you have two arrays: Arr1 and Arr2. [7 Marks]
+        Arr1 will be sorted values. For each element v in Arr2, you need to write a pseudo code that will 
+        print the number of elements in Arr1 that is less than or equal to v. 
+        For example: suppose you are given two arrays of size 5 and 3 respectively.
+        5 3 [size of the arrays]
+        Arr1 = 1 3 5 7 9
+        Arr2 = 6 4 8 
+        The output should be 3 2 4
+        Explanation: Firstly, you should search how many numbers are there in Arr1 which are 
+        less than 6. There are 1, 3, 5 which are less than 6 (total 3 numbers). Therefore, the answer 
+        for 6 will be 3.
+        After that, you will do the same thing for 4 and 8 and output the corresponding answers 
+        which are 2 and 4. Your searching method should not take more than O (log n) time.
+        
+ 8.       On a boring Friday, you are sitting alone in your room. Due to the lockdown, you cannot 
+          go out to play with your friends, so you had nothing to do at home. Suddenly, your little 
+          sister comes and tells you that some of your family members want to play an interesting 
+          game called “Friday Fun”. Therefore, you decided to join in the game. There are few 
+          rules in the game:
+          a. All the members that will play the game must sit in a circular manner.
+          b. There will be packet that they need to pass.
+          c. There will be a dice, which will determine the faith of the player.
+          d. If dice after flipping get ‘1 or 6’, the player has to pass the packet to the 
+          next player (sitting to his/her right).
+          e. If dice after flipping get ‘3 or 5, then the player is in danger but does not 
+          get eliminated, so the player has to pass it to the next member (sitting to 
+          his/her right).
+          f. If dice after flipping get ‘2 or 4, the player gets eliminated and passes the 
+          packet to the next player (sitting to his/her right).
+          g. The game continues until there is only one member left and he/she will get 
+          a surprise gift.
+          Write a method that finds out the winner of the ‘Friday Fun’ game, you will be given as 
+          input the number of players playing and the dice sequence. [You must use recursion for 
+          solving this problem.]       
+
+
